@@ -1,0 +1,220 @@
+@import url(https://db.onlinewebfonts.com/c/7797f6229b01fd22c7f0d6a5410db009?family=Munro);
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    background-image: url(./bg5.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 210vh;
+    z-index: 1;
+}
+
+
+
+.navmenu {
+    position: fixed;
+    background-color:black;
+    width: 100%;
+    padding: 7px 7%;
+    max-width: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 999999999;
+}
+
+.navmenu h1{
+    color: brown;
+    font-size: 2rem;
+}
+
+
+
+ul li{
+    list-style: none;
+    display: inline;
+}
+
+ul li a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: white;
+    font-size:1.3rem ;
+    font-family: monospace;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    width: 0px;
+    border-bottom: 2px solid #3E285C;
+    transition: all .2s linear;
+}
+
+ul li a:hover::before {
+    width: 40px;
+}
+
+.hamburger-menu {
+    color: white;
+    visibility: hidden;
+}
+
+.isi { 
+    position: absolute;
+    top: 350px;
+    left: 500px;
+    font-family: "Munro";
+}
+
+.isi h1 span {
+    color: white;
+}
+
+
+.isi p {
+    position: relative;
+    right: 110px;
+    font-size: 2rem;
+    font-family: monospace;
+    color: red;
+}
+
+
+.isi #h1 {
+    position: absolute;
+    top: -50px;
+    left: 110px;
+    font-size: 3rem;
+    font-weight: 3000;
+    border-right: 5px solid violet;
+    width: 33%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20), cursor .4s step-end infinite alternate;
+}
+
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+.isi button {
+    position: relative;
+    left: 135px;
+    width: 160px;
+    border: none;
+    box-shadow: inset -2px 2px 1px 1px grey,
+                inset -2px -2px 1px 1px white,
+                inset 2px 0px 1px 1px white;
+    background-color: chocolate;
+    font-size: 2rem;
+    font-family: 'Munro';
+    border-radius: 5px;
+}
+
+.isi button:hover {
+    cursor: pointer;
+    background-color: chartreuse;
+    transition: all .2s linear;
+}
+
+
+/* media query*/
+
+/* tablet */
+@media (max-width: 768px ) {
+    .home {
+        width: 768px;
+    }
+
+
+    .navmenu{
+        width: 100%;
+        background-color: black;
+    }
+
+    .navmenu h1 {
+        position: relative;
+        left: -30px;
+        font-size: 2.5rem;
+    }
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 1000px;
+        width: 500px;
+        height: 400px;
+        background-color: rgba(172, 255, 47, 0.726);
+        transition: all .2s linear; 
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    ul li a::before {
+        content: '';
+        display: none;
+    }
+
+    ul li a {
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    ul li{
+        border-bottom: 2px solid black;
+    }
+
+    .menu.active {
+        position: absolute;
+        left: 270px;
+    }
+
+    #hamburger {
+        display: inline-block;
+        position: absolute;
+        left: 700px;
+        visibility: visible;
+        display: inline;
+        font-size: 2rem;
+    }
+
+    .isi #h1 {
+        position: absolute;
+        top: 30px;
+        left: -190px;
+        width: 80%;
+        overflow: hidden;
+}
+
+    .isi p {
+        position: relative;
+        top: 90px;
+        right: 390px;
+        width: 238%;
+        overflow: hidden;
+        font-weight: 1000;
+    }
+
+    .isi button {
+        position: absolute;
+        left: -180px;
+        top: 140px;
+    }
+
+}
